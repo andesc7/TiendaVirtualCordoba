@@ -3,21 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Categoria extends Model
 {
-    protected $table ='categorias';
+    protected $table = 'categorias';
 
-    protected $fillable = [ 
-        'nombre',
-        'descripcion'
-    ];
+    protected $fillable = ['nombre', 'descripcion'];
 
-    public function productos()
+   
+    public function productos(): HasMany
     {
-        return $this->hesMany(Producto::class, 'categoria_id');
-
+        return $this->hasMany(Producto::class, 'categoria_id');
     }
-
-
 }

@@ -1,0 +1,133 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    background-color: #fdfaf5;
+    color: #2c1e16;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background:
+        linear-gradient(rgba(44, 30, 22, 0.65), rgba(44, 30, 22, 0.75)),
+        url('../img/heladeria.jpg') center / cover no-repeat;
+    color: #fdfaf5;
+    padding: 70px 20px;
+    text-align: center;
+    border-bottom: 5px solid #14b8a6;
+}
+header h1 { font-size: 2.3rem; letter-spacing: 1px; margin-bottom: 6px; }
+header p { color: #e2e8f0; font-size: 0.95rem; }
+
+nav {
+    background-color: #0f766e;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+nav a:hover { background-color: #14b8a6; }
+
+main {
+    width: 92%;
+    max-width: 1000px;
+    margin: 36px auto;
+    flex: 1;
+}
+
+.hero {
+    background-color: #ffffff;
+    border: 1px solid #e7ddd0;
+    border-radius: 14px;
+    padding: 44px 32px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(44, 30, 22, 0.08);
+    margin-bottom: 28px;
+}
+.hero h2 { color: #0f766e; font-size: 1.9rem; margin-bottom: 12px; }
+.hero p { color: #5b4636; margin-bottom: 22px; font-size: 1.05rem; }
+
+.boton {
+    display: inline-block;
+    background-color: #14b8a6;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(20, 184, 166, 0.35);
+    transition: background-color 0.3s;
+}
+.boton:hover { background-color: #0f766e; }
+
+.aviso {
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.aviso.ok { background-color: #ccfbf1; color: #0f766e; border: 1px solid #14b8a6; }
+.aviso.no { background-color: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+.aviso.promo { background-color: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+
+.categoria { margin-bottom: 34px; }
+.categoria h3 {
+    color: #0f766e;
+    font-size: 1.5rem;
+    border-bottom: 3px solid #14b8a6;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+.categoria > p { color: #5b4636; margin-bottom: 16px; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+}
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e7ddd0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(44, 30, 22, 0.07);
+}
+.card .icono { font-size: 2.6rem; }
+.card h4 { margin: 8px 0 4px; }
+.card p { font-size: 0.9rem; color: #5b4636; }
+.card .precio { color: #0f766e; font-weight: bold; font-size: 1.2rem; margin-top: 8px; }
+.card.agotado { opacity: 0.55; }
+.etiqueta {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: #ccfbf1;
+    color: #0f766e;
+}
+.etiqueta.rojo { background-color: #fee2e2; color: #991b1b; }
+
+footer {
+    background-color: #2c1e16;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid #14b8a6;
+}
+@media (max-width: 600px) { header h1 { font-size: 1.6rem; } nav { gap: 8px; } }
