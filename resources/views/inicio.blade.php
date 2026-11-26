@@ -9,9 +9,9 @@
 <body>
 
     <header>
-        <h1>🍨 {{ $nombreHeladeria }} 🍨</h1>
-        <p>Administrador: <strong>{{ $administrador }}</strong> | Sede: <strong>{{ $ciudad }}</strong></p>
-    </header>
+    <h1>Gelato Nieve &amp; Menta</h1>
+    <p>Administrador: Andres Lopez | Sede: Pasto | Tel: +573107555409</p>
+</header>
 
     <nav>
         <a href="/">Inicio</a>
@@ -32,13 +32,13 @@
             @endif
 
             @if ($diaSemana == 'martes')
-                <div class="aviso promo">🎉 ¡Hoy es martes de 2x1 en conos!</div>
+                <div class="aviso promo"> ¡Hoy es martes de 2x1 en conos!</div>
             @else
                 <div class="aviso ok">Hoy es {{ $diaSemana }}. ¡Te esperamos!</div>
             @endif
 
             @if ($saborDisponible)
-                <div class="aviso ok">⭐ Sabor especial: {{ $SaborEspecial }} (disponible)</div>
+                <div class="aviso ok"> Sabor especial: {{ $SaborEspecial }} (disponible)</div>
             @else
                 <div class="aviso no">El sabor especial {{ $SaborEspecial }} está agotado.</div>
             @endif
